@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/main.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body id="checkout-body">
+    <div class="container" id="checkout-container">
+        <header>
+            <div id="header-container">
+                <div id="nav-container">
+                    <nav>
+                        <div class="burger">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="audiophile-logo">
+                            <img src="/assets/shared/desktop/logo.svg" alt="audiophile-logo">
+                        </div>
+                        <ul id="nav-ul">
+                            <li id="nav-ul-home"><a href="/index.html">Home</a></li>
+                            <li><a href="/SECTIONS/headphones.html">Headphones</a></li>
+                            <li><a href="/SECTIONS/speakers.html">Speakers</a></li>
+                            <li><a href="/SECTIONS/earphones.html">Earphones</a></li>
+                        </ul>
+                        <div id="cart">
+                            <img src="/assets/shared/desktop/icon-cart.svg" alt="cart">
+                        </div>
+                    </nav>
+                    <hr>
+                </div>
+            </div>
+        </header>
+        <main class="main-products-categories" id="checkout-main-section">
+            <div class="go-back-container">
+                <input class="go-back" type="button" value="Go Back" onclick="history.back(-1)" />
+            </div>
+            <form class="checkout-and-summary-form">
+                <div class="checkout-section">
+                    <h3 class="heading-3">Checkout </h3>
+                    <div class="all-inputs-wrapper">
+                        <div class="billing-details">
+                            <h4 class="sub-title">Billing details</h4>
+                            <div class="inputs-wrapper" id="billing-details-inputs-wrapper">
+                                <div class="each-input-wrapper">
+                                    <label class="input-name" for="name">Name</label><br>
+                                    <input class="input-class" id="name" type="text" placeholder="Alexei Ward">
+                                </div>
+                                <div class="each-input-wrapper">
+                                    <label class="input-name" for="email-address">Email address</label><br>
+                                    <input class="input-class" id="email-address" type="text"
+                                        placeholder="Alexei@mail.com">
+                                </div>
+                                <div class="each-input-wrapper">
+                                    <label class="input-name" for="phone-number">Phone number</label><br>
+                                    <input class="input-class" id="phone-number" type="text"
+                                        placeholder="+1 202-555-0136">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shipping-info">
+                            <h4 class="sub-title">Shipping info</h4>
+                            <div class="inputs-wrapper" id="shipping-info-inputs-wrapper">
+                                <div class="each-input-wrapper" id="your-address-wrapper">
+                                    <label class="input-name" for="your-address">Your Address</label><br>
+                                    <input class="input-class" id="your-address" type="text"
+                                        placeholder="1137 Williams Avenue">
+                                </div>
+                                <div class="each-input-wrapper" id="zip-code-wrapper">
+                                    <label class="input-name" for="zip-code">ZIP code</label><br>
+                                    <input class="input-class" id="zip-code" type="text" placeholder="10001">
+                                </div>
+                                <div class="each-input-wrapper" id="city-wrapper">
+                                    <label class="input-name" for="city">City</label><br>
+                                    <input class="input-class" id="city" type="text" placeholder="New York">
+                                </div>
+                                <div class="each-input-wrapper" id="country-wrapper">
+                                    <label class="input-name" for="country">Country</label><br>
+                                    <input class="input-class" id="country" type="text" placeholder="United States">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-details">
+                            <h4 class="sub-title">Payment details</h4>
+                            <div class="inputs-wrapper" id="payment-details-inputs-wrapper">
+                                <div id="Payment method-wrapper">
+                                    <h5 class="input-name">Payment method</h5>
+                                </div>
+                                <div class="radio-button-wrapper" id="e-money-wrapper">
+                                    <input onclick="eMoney()" class="input-class" id="e-money" type="radio"
+                                        name="payment" value="e-Money" checked>
+                                    <label class="radio-label" for="e-money">e-Money</label>
+                                </div>
+                                <div class="radio-button-wrapper" id="cash-on-delivery-wrapper">
+                                    <input onclick="cashOnDelivery()" class="input-class" id="cash-on-delivery"
+                                        type="radio" name="payment" value="Cash on delivery">
+                                    <label class="radio-label" for="cash-on-delivery">Cash on
+                                        delivery</label>
+                                </div>
+                                <div class="each-input-wrapper" id="e-money-number-wrapper">
+                                    <label class="input-name" for="e-money-number">e-Money number</label><br>
+                                    <input class="input-class" id="e-money-number" type="text" placeholder="238521993">
+                                </div>
+                                <div class="each-input-wrapper" id="e-money-pin-wrapper">
+                                    <label class="input-name" for="e-money-pin">e-money PIN</label><br>
+                                    <input class="input-class" id="e-money-pin" type="text" placeholder="6891">
+                                </div>
+                                <div id="checkout-bottom-text">
+                                    <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery
+                                        courier arrives at your residence. Just make sure your address is correct so
+                                        that your order will not be cancelled.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="summary-section">
+                    <h2>summary</h2>
+                    <h3>No Items in cart</h3>
+                    <div id="total-shipping-vat-grand-wrapper">
+                        <div id="total-shipping-vat-wrapper">
+                            <div class="properties" id="total">
+                                <h4 class="property">total</h4>
+                                <h4 class="value" id="total-value">0</h4>
+                            </div>
+                            <div class="properties" id="shipping">
+                                <h4 class="property">shipping</h4>
+                                <h4 class="value" id="shipping-value">50</h4>
+                            </div>
+                            <div class="properties" id="vat">
+                                <h4 class="property">vat (included)</h4>
+                                <h4 class="value" id="vat-value">0</h4>
+                            </div>
+                        </div>
+                        <div class="properties">
+                            <h4 class="property">grand total</h4>
+                            <h4 class="value" id="grand-value">50</h4>
+                        </div>
+                    </div>
+                    <button id="continue-and-pay">continue and pay</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <div id="footer-container">
+                <div id="footer-div1">
+                    <div class="audiophile-logo">
+                        <img src="/assets/shared/desktop/logo.svg" alt="audiophile-logo">
+                    </div>
+                    <ul>
+                        <li id="nav-ul-home"><a href="/index.html">Home</a></li>
+                        <li><a href="/SECTIONS/headphones.html">Headphones</a></li>
+                        <li><a href="/SECTIONS/speakers.html">Speakers</a></li>
+                        <li><a href="/SECTIONS/earphones.html">Earphones</a></li>
+                    </ul>
+                </div>
+                <div id="footer-div2">
+                    <div id="footer-text-and-imgs-wrapper-wrapper">
+                        <div id="footer-text-and-imgs-wrapper">
+                            <p id="footer-text">Audiophile is an all in one stop to fulfill your audio needs. We're a
+                                small team of music lovers and sound specialists who are devoted to helping you get the
+                                most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.
+                            </p>
+                            <div id="footer-imgs">
+                                <img src="/assets/shared/desktop/icon-facebook.svg" alt="facebook logo">
+                                <img src="/assets/shared/desktop/icon-twitter.svg" alt="twitter logo">
+                                <img src="/assets/shared/desktop/icon-instagram.svg" alt="instagram logo">
+                            </div>
+                            <p id="footer-copyright">Copyright 2021. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="modal-checkout-wrapper">
+        <div class="modal-checkout">
+            <div class="modal-checkout-container">
+                <div id="checkout-header">
+                    <p class="checkout-header-name">cart (2)</p>
+                    <p class="checkout-header-remove-all">Remove All</p>
+                </div>
+                <div class="modal-checkput-product">
+                    <div class="modal-checkput-img-and-name">
+                        <img class="modal-checkput-img"
+                            src="/assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg"
+                            alt="">
+                        <div class="modal-checkput-name-and-price">
+                            <p class="modal-checkput-name">XX99 MK II</p>
+                            <p class="modal-checkput-price">2999</p>
+                        </div>
+                    </div>
+                    <div class="quantity-setter">
+                        <button class="plus-minus" id="minus">-</button>
+                        <span class="number-setter">1</span>
+                        <button class="plus-minus" id="plus">+</button>
+                    </div>
+                </div>
+                <div class="modal-checkput-product">
+                    <div class="modal-checkput-img-and-name">
+                        <img class="modal-checkput-img"
+                            src="/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg" alt="">
+                        <div class="modal-checkput-name-and-price">
+                            <p class="modal-checkput-name">XX59</p>
+                            <p class="modal-checkput-price">899</p>
+                        </div>
+                    </div>
+                    <div class="quantity-setter">
+                        <button class="plus-minus" id="minus">-</button>
+                        <span class="number-setter">2</span>
+                        <button class="plus-minus" id="plus">+</button>
+                    </div>
+                </div>
+                <div id="modal-checkout-total-amount">
+                    <p class="modal-checkout-total">total</p>
+                    <p class="modal-checkout-value">3898</p>
+                </div>
+            </div>
+            <a href="/SECTIONS/checkout.html"><button class="primary-color-btn"
+                    id="checkout-button">checkout</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

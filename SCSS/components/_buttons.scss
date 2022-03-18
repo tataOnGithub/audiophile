@@ -1,0 +1,51 @@
+.see-product-btn {
+    padding: 1.5rem 3.05rem;
+    @include heading-styles (1.3rem, 1.8rem, 0.1rem);
+}
+
+.primary-color-btn {
+    color: $color-light;
+    background: $primary;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background: $color-orange-light;
+    }
+}
+
+.secondary-color-btn {
+    color: $color-light;
+    background: $secondary;
+    border: none;
+
+    &:hover {
+        cursor: pointer;
+        background: lighten($color: $color-dark, $amount: 30%);
+    }
+}
+
+.gray-color-btn {
+    color: $color-dark;
+    border: 0.1rem solid $color-dark;
+    box-sizing: border-box;
+
+    &:hover {
+        cursor: pointer;
+        background: $color-dark;
+        color: $color-light
+    }
+}
+
+.section-shop {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: lighten($color: $color-dark, $amount: 50%);
+    text-transform: uppercase;
+
+    &::after {
+        content: url(/assets/shared/desktop/icon-arrow-right.svg);
+        color: $primary;
+        padding-left: 0.5rem;
+    }
+}

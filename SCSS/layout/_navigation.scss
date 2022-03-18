@@ -1,0 +1,163 @@
+header {
+    width: 100%;
+}
+
+#nav-container {
+    background-color: $nav-color;
+    width: 100%;
+
+    nav {
+        @include flex (center, space-between);
+        max-width: 111rem;
+        margin: auto;
+        height: 9.6rem;
+        color: $color-light;
+
+        @include media-tablet {
+            height: 8.9rem;
+            max-width: 68.9rem;
+        }
+    
+        @include media-mobile {
+            max-width: 32.7rem;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+
+            @include media-tablet {
+                display: block;
+                flex: 1;
+            }
+
+            @include media-mobile {
+                flex: 0;
+            }
+
+            div{
+                width: 2.5rem;
+                height: 0.3rem;
+                background-color: white;
+                margin: 0.5rem;
+            }
+        }
+
+        .audiophile-logo {
+
+            @include media-tablet {
+                flex: 8;
+            }
+
+            @include media-mobile {
+                flex: 0;
+            }
+        }
+
+        #nav-ul {
+            list-style: none;
+            @include flex (center, space-between);
+
+            @include media-tablet {
+                display: none; 
+            }
+
+            li {
+                padding: 0 1.7rem;
+                color: $color-light;
+
+                @include heading-styles (1.3rem, 2.5rem, 0.2rem);
+
+                a {
+                    color: $color-light;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        #cart {
+            cursor: pointer;
+            position: relative;
+            @include media-tablet {
+                flex: 0;
+            }
+
+            &::after {
+                content: '0';
+                position: absolute;
+                padding: 0.66rem 0.9rem;
+                border-radius: 50%;
+                background-color: $primary;
+                top: -1.7rem;
+                right: -1.7rem;
+            }
+        }
+    }
+
+    hr {
+        max-width: 111rem;
+        margin: auto;
+        border: none;
+        height: 0.1rem;
+        background: $color-light;
+        mix-blend-mode: normal;
+        opacity: 0.2;
+    }
+}
+
+
+.section-of-products-navbar-wrapper {
+    display: none;
+
+    @include media-tablet {
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+        max-width: 76.8rem;
+        height: 34rem;
+        background-color: $color-light;
+        right: 0;
+        left: 0;
+    }
+
+    @media only screen and (max-width: 69rem) {
+        width: 69rem;
+    }
+
+    @include media-mobile {
+        max-width: 37rem;
+        height: 95rem;
+        top: 8.9rem;
+        padding-top: 8.4rem;
+    }
+
+    @media only screen and (max-width: 37rem) {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 32.8rem) {
+        width: 32.8rem;
+    }
+
+    .section-of-products {
+        @media only screen and (max-width: 37rem) {
+            width: 12.3rem;
+        }
+
+        .section-products {
+            @media only screen and (max-width: 37rem) {
+                width: 25rem;
+            }
+        }
+    }
+}
+
+.display-navbar {
+    @include media-tablet {
+        display: inline-block;  
+    }
+}

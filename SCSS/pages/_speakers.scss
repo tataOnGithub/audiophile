@@ -1,0 +1,5 @@
+#speakers-main2 {
+    @include media-tablet {
+        flex-direction: column-reverse;
+    }
+}

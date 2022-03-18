@@ -1,0 +1,45 @@
+@mixin button-variant ($background, $color, $border, $hover-background, $hover-color) {
+    color: $color;
+    background: $background;
+
+    &:hover {
+        background: $hover-background;
+        color: $hover-color;
+    }
+}
+
+@mixin media-tablet {
+    @media only screen and (max-width: 76.8rem) {
+        @content;                 
+    }
+}
+
+@mixin media-mobile {
+    @media only screen and (max-width: 37.5rem) {
+        @content;                 
+    }
+}
+
+@mixin heading-styles ($font-size, $line-height, $letter-spacing) {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin center ($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin flex ($align, $justify, $direction: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}

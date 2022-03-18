@@ -1,0 +1,167 @@
+.modal-checkout-wrapper {
+    display: none;
+    position: absolute;
+    top: 14.5rem; 
+    right: 18.8rem;
+
+    @include media-tablet {
+        top: 11rem; 
+        right: 4rem;    
+    }
+
+    @include media-mobile {
+        top: 11.4rem;
+        right: auto;
+        left: auto;
+    }
+
+    .modal-checkout {
+    display: none;
+    width: 37.7rem;
+    background-color: $color-light;
+    padding: 3.3rem 3.1rem;
+    border-radius: 0.8rem;
+    @include flex (space-between, center, column);
+    gap: 2.4rem;
+
+    @include media-mobile {
+        width: 32.7rem;
+
+    }
+
+        .modal-checkout-container {
+            @include flex (space-between, center, column);
+            gap: 3.1rem;
+
+            #checkout-header {
+                @include flex (center, space-between);
+
+                .checkout-header-name {
+                    @include heading-styles (1.8rem, 2.5rem, 0.13rem);
+                }
+
+                .checkout-header-remove-all {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                    text-decoration-line: underline;
+                    color: $color-dark;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                    cursor: pointer;
+                }
+            }
+        
+            .modal-checkput-product {
+                @include flex (center, space-between);
+        
+                .modal-checkput-img-and-name {
+                    @include flex (center, space-between);
+                    gap: 1.6rem;
+
+                    .modal-checkput-img {
+                        width: 6.4rem;
+                        height: 6.4rem;
+                    }
+
+                    .modal-checkput-name-and-price {
+                        .modal-checkput-name {
+                            font-family: 'Manrope';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 1.5rem;
+                            line-height: 2.5rem;
+                            color: $color-dark;
+                        }
+
+                        .modal-checkput-price {
+                            font-family: 'Manrope';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 1.4rem;
+                            line-height: 2.5rem;
+                            color: $color-dark;
+                            mix-blend-mode: normal;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+
+                .quantity-setter {
+                    padding: auto;
+                    width: 9.6rem;
+                    height: 3.6rem;
+                    @include flex (center, space-between);
+                    background: $color-gray;
+                
+                    .number-setter {
+                        @include heading-styles (1.3rem, 1.8rem, 0.1rem);
+                        padding: 1.5rem;
+                    }
+                
+                    .plus-minus {
+                        @include heading-styles (1.3rem, 1.8rem, 0.1rem);
+                        @include center;
+                        padding: 0.9rem;
+                        border: none;
+                        text-align: center;                
+                        color: $color-dark;
+                        opacity: 0.25;
+            
+                        &:hover {
+                            background-color: darken($color: $color-gray, $amount: 20%);
+                            color: $primary;
+                            opacity: 1;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        
+            #modal-checkout-total-amount {
+                @include flex (center, space-between); 
+
+                .modal-checkout-total {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 25px;
+                    color: $color-dark;
+                    mix-blend-mode: normal;
+                    opacity: 0.5;
+                }
+
+                .modal-checkout-value {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                    line-height: 2.5rem;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $color-dark;  
+                    
+                    &::before {
+                        content: '$';
+                    }
+                }
+            }
+        }
+
+        a {
+            #checkout-button {
+                @include heading-styles (1.3rem, 1.8rem, 0.1rem);
+                padding: 1.5rem 6.25rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+.display-checkout-modal {
+    display: block;
+}

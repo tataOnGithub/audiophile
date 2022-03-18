@@ -1,0 +1,32 @@
+@use './abstracts/mixins' as *;
+@use './abstracts/variables' as *;
+@import './base/typography';
+@import './components/buttons';
+@import './layout/footer';
+@import './layout/guy-section';
+@import './layout/header';
+@import './layout/modals';
+@import './layout/navigation';
+@import './layout/products-category-section';
+@import './pages/home';
+@import './pages/checkout';
+@import './pages/headphones-speakers-earphones-shered-layout';
+@import './pages/headphones';
+@import './pages/products-description-pages-share';
+@import './pages/speakers';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+
+

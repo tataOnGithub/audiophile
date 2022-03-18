@@ -1,0 +1,20 @@
+// colors
+$color-orange: #D87D4A;
+$color-black: #101010;
+$color-orange-light: #FBAF85;
+$color-gray: #F1F1F1;
+$color-light-gray: #FAFAFA;
+$color-light: #FFFFFF;
+$color-dark: #000000;
+$checkout-color: #F2F2F2;
+$checkout-border-color: #CFCFCF;
+$nav-color: lighten($color: $color-black, $amount: 3%);
+
+$primary: $color-orange;
+$primary-light: $color-orange-light;
+$secondary: $color-black;
+
+$breakPoints: (
+    'tablet': 76.8rem,
+    'mobile': 37.5rem
+)

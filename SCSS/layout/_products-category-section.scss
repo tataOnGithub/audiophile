@@ -1,0 +1,79 @@
+section.section-of-products {
+    max-width: 111rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;  
+
+
+
+    @include media-tablet {
+        max-width: 68.9rem;    
+        gap: 1rem;  
+    }
+
+    @include media-mobile {
+        @include flex (center, center, column);
+            max-width: 32.7rem;
+            height: 68.3rem;   
+            gap: 6.8rem;
+        }
+
+    a {
+        text-decoration: none;
+
+        .section-products {
+            position: relative;
+            width: 35rem;
+            height: 20.4rem;
+            margin-top: 8rem;
+            background: $color-gray;
+            border-radius: 0.8rem;
+            padding-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            cursor: pointer;
+            
+
+            @include media-tablet {
+                max-width: 22.3rem;
+                height: 16.5rem;     
+            }
+
+            @include media-mobile {
+                max-width: 32.7rem;
+                height: 16.5rem;     
+            }
+
+            .img-section {
+                position: absolute;
+                left: 0x;
+                top: -5rem;
+                width: 15rem;
+            }
+
+            .products-section-text-wrapper {
+                @include flex (center, center, column);
+                gap: 1.7rem;
+            }
+
+            p {
+                @include center;
+            }
+
+            .section-name {
+                @include heading-styles (1.8rem, 2.5rem, 0.128571rem);
+                color: $color-dark;
+            }
+
+            &:hover {
+                .section-shop{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
